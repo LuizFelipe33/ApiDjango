@@ -71,5 +71,5 @@ class PaginaInicial(TemplateView):
     template_name = 'index.html'
     permissions_classes = (IsAuthenticated)
 
-def yourName(request, name):
-    return render(request, 'paginas/yourname.html', {'name': name})
+def vendas(request):
+    return render(request, 'vendas.html')

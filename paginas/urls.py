@@ -1,6 +1,8 @@
 from django.urls import path
+from django.urls import path, include
 from .views import PaginaInicial
 from . import views
+
 
 urlpatterns = [
     #path('endereço/', minhaview.as_view(), name='nome-da-url'),
@@ -10,4 +12,5 @@ urlpatterns = [
     path('newtask/', views.newTask, name="new-task"),
     path('edit/<int:id>', views.editTask, name="edit-task"),
     path('delete/<int:id>', views.deleteTask, name="delete-task"),
+    path('vendas',views.vendas)
 ]
