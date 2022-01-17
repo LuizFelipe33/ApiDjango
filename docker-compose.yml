@@ -1,10 +1,6 @@
 version: '3'
 services:
-  backend:
-    build: 
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      -210
-    volumes:
-      - .:/app
+  app:
+    build: app
+  api:
+    build: api
