@@ -5,8 +5,8 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /code
 
-COPY requiriment.txt .
-RUN pip install -r requiriment.txt
+COPY requiriments.txt .
+RUN pip install -r requiriments.txt
 
 COPY . .
 CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8000" ]
