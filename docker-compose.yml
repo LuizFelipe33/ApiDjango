@@ -1,22 +1,10 @@
-version: "3.8"
-
+version: '3.8'
 services:
-  web:
-    build: .
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/code
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - 8000:8000
-    depends_on:
-      - db
-  db:
-    image: sqlite3
-    environment:
-      - SQLITE_USER=sqlite
-      - SQLITE_PASSWORD=sqlite
+      -8000:8000
     volumes:
-      - sqlite_data:/var/lib/sqlite/data/
-
-volumes:
-  sqlite_data:
+      - .:/app

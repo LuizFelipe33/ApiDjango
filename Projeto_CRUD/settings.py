@@ -79,11 +79,7 @@ WSGI_APPLICATION = 'Projeto_CRUD.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':'db.sqlite3',
-        'USER': "sqlite",
-        'PASSWORD': "sqlite",
-        'HOST': "db",
-        "PORT": "",
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
